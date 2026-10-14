@@ -94,3 +94,26 @@ devices:
         description: "To IBN-Core2"
         ip: 10.100.34.2
         mask: 255.255.255.252
+
+  blredgr01:
+    hostname: IBN-HQ
+    mgmt_ip: 192.168.68.113
+    mgmt_mask: 255.255.255.0
+    mgmt_interface: GigabitEthernet1
+    loopback_ip: 10.100.0.1
+    default_gateway: 10.255.255.1
+    username: admin
+    password: admin@123
+    enable_secret: OA1snFbloC
+    role: headquarters
+
+    # P2P interface IPs (configured by IBN Platform, not bootstrap)
+    interfaces:
+      GigabitEthernet2:
+        description: "To IBN-Core1"
+        ip: 10.100.12.1
+        mask: 255.255.255.252
+      GigabitEthernet3:
+        description: "To IBN-Core2"
+        ip: 10.100.13.1
+        mask: 255.255.255.252
